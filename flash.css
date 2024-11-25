@@ -1,0 +1,393 @@
+/* General styling */
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url(bg.jpg);
+    font-size: large;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    /* padding: 50px; */
+    color: white;
+    
+  }
+
+  /* Navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    height: 60px; /* Smaller fixed height */
+    padding: 0 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width:98.5%;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3b49df;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Smaller gap between elements */
+}
+
+/* Dropdowns and Input */
+.menu select,
+.menu input {
+    height: 35px;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f1f3f5;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.menu input {
+    /* flex-grow: 1; */
+    max-width: 300px;
+}
+
+
+
+/* Buttons */
+.menu .create-btn {
+    color: #3b49df;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu .login-btn {
+    background: #3b49df;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.menu .login-btn:hover {
+    background: #3249ab;
+    transform: scale(1.05);
+}
+.search{
+  width: 300px;
+}
+ 
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto; /* Adjust height for stacked elements */
+  }
+
+  .menu {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+  }
+
+  .menu input {
+      max-width: 100%;
+  }
+
+  .menu .login-btn {
+      align-self: flex-end; /* Align login button to the right */
+  }
+}
+
+  .center {
+    text-align: center;
+    font-size: larger;
+    padding: 50px;
+  }
+  .sign-up a {
+    padding: 20px 30px;
+    background-color: #3b49df;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    font-size: large;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  h4 {
+    font-weight: lighter;
+  }
+  .study-type {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden; /* Hide overflow to create sliding effect */
+    /* width: 100%; Ensure it fills the parent container */
+}
+
+.slider-container {
+    display: flex;
+    width: calc(300px * 10); /* Adjust width based on number of items */
+    animation: slide 10s linear infinite; /* Adjust time for desired speed */
+}
+
+/* Style for each individual sliding div */
+.sectionb {
+    height: 450px;
+    width: 400px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.sectionb:hover {
+    transform: scale(1.05);
+}
+
+/* Custom backgrounds for the divs */
+#sec1 {
+    background-color: #eeaaff;
+    
+}
+
+#sec2 {
+    background-color: #98e3ff;
+}
+
+#sec3 {
+    background-color: #423ed8;
+}
+
+#sec4 {
+    background-color: #ff3;
+}
+
+#sec5 {
+    background-color: rgb(116, 255, 51);
+}
+
+/* Duplicate the divs for a smooth transition */
+#sec6 { background-color: #eeaaff; } /* Duplicates of #sec1 */
+#sec7 { background-color: #98e3ff; } /* Duplicates of #sec2 */
+#sec8 { background-color: #423ed8; } /* Duplicates of #sec3 */
+#sec9 { background-color: #ff3; }    /* Duplicates of #sec4 */
+#sec10 { background-color: rgb(116, 255, 51); } /* Duplicates of #sec5 */
+
+#sec1,
+#sec2,
+#sec3,
+#sec4,
+#sec5,#sec6,#sec7,#sec8,#sec9,#sec10 {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  box-shadow: 0px 1px 5px rgba(6, 6, 6, 0.1);
+}
+
+.blockfirst,
+.blocksecond,
+.blockthird,
+.blockfourth,
+.blockfifth {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    position: end;
+    justify-content: end;
+    align-items: end;
+}
+
+.blockfirst{
+    background-image: url(1stblock.avif);
+}
+
+.blocksecond {
+    background-image: url(2ndblock.avif);
+}
+
+.blockthird {
+    background-image: url(3rdblock.avif);
+}
+
+.blockfourth {
+    background-image: url(4thblock.avif);
+}
+
+.blockfifth {
+    background-image: url(5thblock.avif);
+}
+
+
+/* Keyframes to smoothly slide the divs */
+ @keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);  
+    }
+} 
+
+
+
+  /* Responsive adjustments for ad sections */
+  @media (max-width: 768px) {
+    .ad-section {
+      flex-direction: column;
+    }
+    .text-container {
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+
+  /* fixed right and left button  */
+  /* #btn{
+        display:;
+        position:fixed;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        /* z-index: 1; 
+        margin-top: 140px;
+        margin-left: ;
+        cursor: pointer;
+    } */
+
+  /* Sections */
+
+  .ad-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px;
+    /* background-color: #ffffff; */
+  }
+
+  .text-container {
+    max-width: 45%;
+    padding: 70px;
+  }
+
+  .text-container h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .text-container p {
+    font-size: 1.3em;
+    color:whitesmoke;
+    margin-bottom: 30px;
+  }
+
+  .app-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .app-buttons img {
+    height: 50px;
+  }
+
+  .image-container img {
+    width: 600px;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 48px;
+    /* border:solid; */
+    /* box-sizing: border-box; */
+  }
+
+  /* Footer Section */
+
+  footer {
+    background-color: #f9f9f9;
+    /* padding: 40px ; */
+    text-align: left;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-column {
+    width: 18%;
+  }
+
+  .footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .language {
+    width: 10%;
+  }
+
+  
+  .copyright {
+    text-align: center;
+    background-color: #333;
+    color: whitesmoke;
+    padding: 5px;
+  }
+  /* Responsive adjustments for footer */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-column {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  
+  
