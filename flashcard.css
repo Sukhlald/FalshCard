@@ -1,0 +1,218 @@
+
+/* Body Styling */
+body {
+font-family: Arial, sans-serif;
+background: url(study2.png);
+/* background-size: */
+background-repeat: repeat;
+margin: 0;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+box-sizing: border-box;
+overflow: auto; /* Enables vertical and horizontal scrolling */
+}
+/* Styling the navigation bar */
+/* Styling the navigation bar */
+nav {
+width: 100%;
+padding: 10px 20px;
+background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+backdrop-filter: blur(5px); /* Blur effect */
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+position: fixed; /* Fixed at the top of the page */
+top: 0;
+left: 0;
+z-index: 10; /* Ensures it's above other content */
+box-sizing: border-box;
+}
+
+/* Logo styling */
+nav .logo {
+font-size: 24px;
+font-weight: bold;
+color: #4CAF50; /* Green color for logo text */
+white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* User section styling */
+nav .user {
+display: flex;
+align-items: center;
+gap: 10px; /* Space between the icon and the text */
+font-size: 18px;
+color: #333;
+white-space: nowrap; /* Prevent text from wrapping */
+overflow: hidden; /* Ensure no content goes out of bounds */
+text-overflow: ellipsis; /* If the content is too long, add an ellipsis */
+}
+
+/* User icon styling */
+nav .user img.user-icon {
+width: 30px;
+height: 30px;
+border-radius: 50%; /* Makes the icon circular */
+border: 2px solid #4CAF50; /* Green border around the icon */
+object-fit: cover; /* Ensure the image fits perfectly */
+}
+
+
+/* Flashcard Creation Section */
+/* Flashcard Section Styling */
+.flashcard-section {
+background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+border-radius: 15px;
+padding: 25px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+width: 100%;
+max-width: 600px;
+margin: 20px auto; /* Adds vertical and horizontal margins */
+text-align: center;
+animation: fadeIn 1s ease-in-out;
+backdrop-filter: blur(5px); /* Adds blur for enhanced effect */
+border: 1px solid #d3d3d3; /* Optional subtle border for definition */
+box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+
+.flashcard-section h1 {
+    font-size: 28px;
+    color:black;
+}
+
+.flashcard-section input,
+.flashcard-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ff6f61;
+    border-radius: 1px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.flashcard-section button {
+    background: linear-gradient(135deg, #48283f 0%, #a6c1ee 100%);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.flashcard-section button:hover {
+    background: linear-gradient(135deg, #ff6f61 0%, #ff9a9e 100%);
+}
+
+/* Flashcards Container */
+.flashcards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Flashcard Styling */
+.flashcard {
+    background: linear-gradient(135deg, #f6d365 0%, #feebe6 100%);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    text-align: center;
+}
+
+.flashcard h3 {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.flashcard .answer {
+    font-size: 16px;
+    color: #333;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-y: auto; /* Enables scrolling for long content */
+    max-height: 100px; /* Restricts height */
+    line-height: 1.5;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.flashcard-buttons {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 15px;
+}
+
+
+.edit-button,
+.remove-button {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: none;
+color: white;
+font-size: 18px;
+cursor: pointer;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+transition: transform 0.2s ease;
+}
+
+/* Green circular edit button */
+.edit-button {
+background-color: #4CAF50;
+}
+
+.edit-button:hover {
+transform: scale(1.1);
+}
+
+/* Red circular remove button */
+.remove-button {
+background-color: #ff5252;
+}
+
+.remove-button:hover {
+transform: scale(1.1);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .flashcard {
+        max-width: 90%;
+    }
+}
+
+footer{
+    margin: 0;
+
+}
+.copyright {
+    width:800px;
+text-align: center;
+background-color: #333;
+color: whitesmoke;
+margin: 3px;
+padding: 3px;
+}
